@@ -1,0 +1,178 @@
+.hovered-card {
+  position: fixed;
+  width: 350px;
+  background-color: #141414;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.hovered-card.visible {
+  opacity: 1;
+  pointer-events: auto;
+  animation: zoomInEffect 1s ease-in-out forwards;
+}
+
+.hidden {
+  opacity: 0 !important;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.hovered-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.hovered-card-details {
+  padding: 15px;
+  color: white;
+}
+
+.hovered-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.hover-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-btn svg {
+  color: white;
+  font-size: 20px;
+}
+
+.hover-btn:hover {
+  background-color: white;
+}
+
+.hover-btn:hover svg {
+  color: black;
+}
+
+.certificate-box {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.drop-down {
+  margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+  .hovered-card {
+      width: 300px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hovered-card {
+      width: 250px;
+  }
+
+  .hovered-card-img {
+      height: 180px;
+  }
+
+  .hovered-card-details {
+      padding: 10px;
+  }
+
+  .hover-btn {
+      width: 35px;
+      height: 35px;
+  }
+
+  .hover-btn svg {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hovered-card {
+      width: 200px;
+  }
+
+  .hovered-card-img {
+      height: 150px;
+  }
+
+  .hovered-card-details {
+      padding: 8px;
+      font-size: 12px;
+  }
+
+  .hover-btn {
+      width: 30px;
+      height: 30px;
+  }
+
+  .hover-btn svg {
+      font-size: 16px;
+  }
+}
+
+@media (max-width:1024px){
+  .hero-caption .title-cards{
+      display:none;
+  }
+  .hero-btns{
+      margin-bottom: 30px;
+  }
+}
+
+@media (max-width:800px){
+  .hero-caption{
+      padding-left:4%;
+  }
+  
+  .hero-caption p{
+      font-size: 12px;
+      margin-bottom: 10px;
+  }
+  hero-btns .btn img{
+      width: 20px;
+  }
+  .more-cards{
+      padding-left: 4%;
+  }
+  .hero-btns .btn img{
+      width: 25px;
+  }
+}
+
+@media (max-width:500px){
+  .hero-btns .btn img{
+      width: 15px;
+  }
+  .hero-btns .btn{
+      padding: 4px 10px;
+      gap: 5px;
+      font-size: 10px;
+  }
+}

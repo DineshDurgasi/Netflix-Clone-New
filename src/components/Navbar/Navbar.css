@@ -1,0 +1,267 @@
+.navbar {
+    width: 100%;
+    padding: 14px 4%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    font-size: 9.8px;
+    color: #e5e5e5;
+    z-index: 1;
+    transition: background 0.9s ease;
+}
+
+
+.navbar:not(.scrolled) {
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
+}
+
+
+.navbar.scrolled {
+    background-color: black;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.navbar-left img {
+    width: 98px;
+    height: 22px;
+}
+
+.navbar-left ul {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+}
+
+.navbar-left ul li {
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+.navbar-left ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.navbar-left ul li:hover,
+.navbar-left ul li a:hover {
+    color: #fff;
+}
+
+
+.navbar-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar-right .icons {
+    width: 13px;
+    cursor: pointer;
+}
+
+.navbar-right .profile {
+    border-radius: 4px;
+    width: 25px;
+}
+
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: max-content;
+    background: #191919;
+    padding: 10px 12px;
+    border-radius: 2px;
+    text-decoration: underline;
+    z-index: 1;
+    display: none;
+}
+
+.navbar .dropdown p {
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.navbar-profile:hover .dropdown,
+.navbar-profile:focus-within .dropdown {
+    display: block;
+}
+
+
+.genre-dropdown {
+    display: flex; 
+    align-items: center; 
+}
+
+.genre-button {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 10px;
+}
+
+.genre-button:hover {
+    background-color: rgba(80, 80, 80, 0.9);
+}
+
+.genre-option {
+    background-color: #222;
+    color: white;
+    padding: 5px 8px;
+}
+
+.genre-option:hover {
+    background-color: rgba(100, 100, 100, 0.8);
+}
+
+.genre-select:focus {
+    outline: none;
+}
+
+.genre-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+.search-input {
+    width: 120px;
+    padding: 7px 10px;
+    font-size: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3);
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 7px 3%;
+    }
+
+    .navbar-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+    }
+
+    .navbar-left img {
+        width: 60px;
+        height: 15px;
+    }
+
+    .navbar-left ul {
+        gap: 10px;
+    }
+
+    .navbar-left ul li {
+        font-size: 9px;
+    }
+
+    .navbar-right {
+        gap: 7px;
+    }
+
+    .navbar-right .icons {
+        width: 10px;
+    }
+
+    .navbar-right .profile {
+        width: 18px;
+    }
+
+    .search-input {
+        width: 90px;
+        font-size: 7px;
+    }
+
+    .genre-button {
+        padding: 5px 7px;
+        font-size: 9px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    .navbar-left ul {
+        display: none;
+    }
+
+    .browse-dropdown {
+        position: relative;
+    }
+
+    .browse-dropdown button {
+        background-color: rgba(50, 50, 50, 0.8);
+        color: white;
+        border: none;
+        padding: 7px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .browse-dropdown .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: black;
+        list-style: none;
+        padding: 5px 0;
+        margin: 0;
+        border-radius: 3px;
+        width: 120px;
+        box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .browse-dropdown .dropdown-menu li {
+        padding: 7px 10px;
+        cursor: pointer;
+    }
+
+    .browse-dropdown .dropdown-menu li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+
+    .browse-dropdown .dropdown-menu li:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}

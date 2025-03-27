@@ -1,0 +1,35 @@
+
+.theme-toggle {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #4a90e2, #1c74d9);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .theme-toggle:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .light-theme {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+  }
+  
+  
+  .dark-theme {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+  }
+  
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+  }
